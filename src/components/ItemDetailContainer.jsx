@@ -23,14 +23,17 @@ function ItemDetailContainer() {
     >
       {
       itemData.loading 
-      ? (<BeatLoader color={"#ff2288"} size={10} />) 
+      ? (
+            <BeatLoader color={"#ff2288"} size={10} />
+        ) 
       : (
-        <div>
-          <img width="120" src={itemData.img} alt="collar" />
-          <h4>{itemData.title}</h4>
-          <p>Precio: $ {itemData.price}</p>
-        </div>
-      )}
+            <div>
+            <img width="120" src={itemData.img} alt="collar" />
+            <h4>{itemData.title}</h4>
+            <p>Precio: $ {itemData.price}</p>
+            </div>
+        )
+      }
     </div>
   );
 }
