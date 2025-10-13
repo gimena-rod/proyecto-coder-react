@@ -1,16 +1,30 @@
 import Item from "./Item";
-import collargato from "../assets/collargato.jpg";
-import pufferRubi from "../assets/pufferRubi.jpeg";
+import getData, { getProductsByCategory } from "../data/apiService.js";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router";
 
+function ItemListContainer(props) {
+  const [productos, setProductos] = useState([]);
+  const { catParam } = useParams();
 
-function ItemListContainer( props ){
-    return (
-        <section className="itemlist">
-            <h3> {props.greeting} </h3>
-            <Item title="Collar para Gatos" img={collargato} price="2000"/>
-            <Item title="Chaleco puffer" img={pufferRubi} price="20000"/>
-        </section>
-    )
+  useEffect(() => {
+    if (catParam) {
+      getProductsByCategory(catParam).then((data) => setProductos(data));
+    } else {
+      getData().then((data) => {
+        console.log("Todos los productos recibidos", data);
+        setProductos(data);
+      });
+    }
+  }, [catParam]);
+
+  return (
+    <section className="Itemlist">
+      <h3> {props.greeting} </h3>
+      {productos.map((item) => (
+        <Item key={item.id} {...item} />
+      ))}
+    </section>
+  );
 }
-
 export default ItemListContainer;

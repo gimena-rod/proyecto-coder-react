@@ -1,0 +1,55 @@
+[
+    {
+        "id": 1,
+        "stock": 1,
+        "category": "gatos",
+        "img": "../public/img/collargato.jpg",
+        "title": "Collar",
+        "price": 2000
+    },
+
+    {
+        "id": 2,
+        "stock": 2,
+        "category": "perros",
+        "img": "../public/img/pechera y correa.jpg",
+        "title": "Correa",
+        "price": 4000
+    },
+
+    {
+        "id": 3,
+        "stock": 3,
+        "category": "perros",
+        "img": "../public/img/pechera y correa.jpg",
+        "title": "Pechera",
+        "price": 5000
+    },
+
+    {
+        "id": 4,
+        "stock": 4,
+        "category": "perros",
+        "img": "../public/img/pufferRubi.jpeg",
+        "title": "Chaleco puffer",
+        "price": 20000
+    },
+
+    {
+        "id": 5,
+        "stock": 5,
+        "category": "perros",
+        "img": "../public/img/pechera y correa.jpg",
+        "title": "Abrigo",
+        "price": 8000
+    },
+
+    {
+        "id": 6,
+        "stock": 6,
+        "category": "perros",
+        "img": "../public/img/juguete perro.jpg",
+        "title": "juguete",
+        "price": 7000
+    }
+]
