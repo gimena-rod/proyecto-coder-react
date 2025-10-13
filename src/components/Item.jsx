@@ -1,3 +1,4 @@
+import { Link } from "react-router"
 export default function Item(props) {
     const texto = `Producto ${props.title}`
     console.log(texto)
@@ -6,7 +7,9 @@ export default function Item(props) {
         <img width={"120"} src={ props.img } alt="Collar" />
         <h4>{ props.title }</h4>
         <p>Precio: ${ props.price }</p>
+        <Link to={ `/detalles/${props.id}` }>
         <button>Ver más</button>
+        </Link>
     </div>
 
 }
